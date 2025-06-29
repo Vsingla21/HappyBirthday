@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,500&display=swap");
+
+/* COLOR PALLETTE */
+/* elegant */
+/* background-image: linear-gradient(180deg, #800000, #d8a7b1, #fffff0, #b87333) ; */
+/* playful */
+/* background-image: linear-gradient(180deg,#ff7f50,#98ff98,#87ceeb,#fffacd,#e6e6fa ); */
+/* ROMANTIC*/
+/* background-image: linear-gradient(180deg, #ff007f, #ffb6c1, #f7e7ce, #fffff0, #ffd700); */
+/* pastel romantic */
+/* background-image: linear-gradient(#ffd1dc,#b0e0e6, #e6e6fa, #98ff98, #fffdd0); */
+/* classic romance */
+/* background-image: linear-gradient(#dc143c,#ffdab9, #e0b0ff, #e6be8a,#fffff0); */
+/* soft romance */
+/* background-image: linear-gradient(#f4c2c2, #f08080, #c8a2c8, #f7e7ce, #fffdd0); */
+/* sunset */
+/* background-image: linear-gradient(#ff4500, #ffdab9, #ffd700, #f08080, #f3e5ab); */
+/* dreamy */
+/* background-image: linear-gradient(#ff66b2, #d8bfd8, #2e8b57, #fdf5e6, #ffec8b); */
+/* sky */
+/* background-image: linear-gradient(#87ceeb, #f0f8ff, #e6e6fa,#ffb6c1, #add8e6); */
+
+:root {
+    --color1: #ffd1dc;
+    --color2: #b0e0e6;
+    --color3: #e6e6fa;
+    --color4: #98ff98;
+    --color5: #fffdd0;
+  }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #fff;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-image: linear-gradient(
+      180deg,
+      var(--color1),
+      var(--color2),
+      var(--color3, var(--color4), var(--color5))
+    );
+    text-align: center;
+    padding: 20px;
+    color: black;
+    position: fixed;
+    font-size: larger;
+    height: 100%;
+    /* border-right: 5px solid #333; */
+    border-top: 5px solid #333;
+    font-family: "Clicker Script", cursive;
+  }
+
+  .heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 3px dotted;
+  }
+  
+  .heart-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .note {
+    margin-top: 20px;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-size: medium;
+    color: #000;
+  }
+  
+  .made-by {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-bottom: 50px;
+    /* color: white; */
+    font-weight: 700;
+  }
+  
+  .main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .navbar {
+    background-image: linear-gradient(
+      90deg,
+      var(--color1),
+      var(--color2),
+      var(--color3, var(--color4), var(--color5))
+    );
+    padding: 20px;
+    text-align: right;
+    position: fixed;
+    width: calc(100% - 220px);
+    top: 0;
+    border-top: 5px solid #333;
+    left: 220px;
+    z-index: 1000;
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+
+  .navbar a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+    font-size: larger;
+  }
+
+  marquee {
+    margin-left: 20px;
+    margin-top: 50px;
+    background-color: black;
+    color: var(--color2);
+    padding: 20px 10px 10px 20px;
+    display: flex;
+    position: fixed;
+    text-align: end;
+    z-index: 999;
+    font-family: "Dancing Script", cursive;
+    font-weight: 500;
+  }
+
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline styles */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--color2);
+    left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.timeline-item.left .timeline-content {
+    margin-left: 40px;
+    text-align: left;
+    text-decoration: overline;
+}
+
+.timeline-item.right .timeline-content {
+    margin-left: auto;
+    margin-right: 40px;
+    text-align: right;
+    text-decoration: overline;
+}
+
+
+.timeline-bar {
+    width: 100%;
+    height: 100px;
+    background-color: lightgrey;
+    background-image: linear-gradient(white, var(--color1));
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.timeline-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.timeline-date {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgb(47, 45, 45);
+}
+
+.timeline-item.left .timeline-bar .timeline-date{
+  margin-left: 250px;
+  margin-top: 40px;
+  font-size: larger;
+}
+
+.timeline-item.right .timeline-bar .timeline-date{
+  margin-left: 600px;
+  margin-top: 40px;
+  font-size: larger;
+}

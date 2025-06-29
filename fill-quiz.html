@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    
+    <div class="sidebar">
+        <div class="heart-container">
+            <img src="iimages/sidebar-img.jpg" alt="Heart Image" class="heart-image">
+        </div>
+        <h2>Happy Birthday</h2>
+        <p class="note">OUR LOVE IS FOREVER! <br>
+            IT HAS ALWAYS BEEN! <br>
+            IT WILL ALWAYS BE! <br>
+            ALWAYS AND FOREVER!</p>
+        <p class="made-by">Made with ❤️ by your love</p>
+    </div>
+    <div class="main-content">
+        <nav class="navbar">
+            <a href="birthday.html">Home</a>
+            <a href="journey.html">Our Journey</a>
+            <a href="proposal.html">Proposal</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+        <marquee style="width: 100%;" scrollamount="10" direction="">Happy Birthday To Love, With Love, From Love.    Happy Birthday To Love, With Love, From Love    Happy Birthday To Love, With Love, From Love.</marquee>
+        <div class="quiz-container">
+            <!-- Fill in the Blanks Section -->
+            <div class="quiz-section">
+                <h2>Fill in the Blanks</h2>
+                <div class="question" id="question3">
+                    <p>3. My dream vacation destination is __________.</p>
+                    <input type="text" class="form-control" id="question3_input" data-answer="Paris">
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button class="btn" onclick="calculateScore()">Submit Quiz</button>
+            </div>
+        </div>
+    
+        <!-- Result Modal -->
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Quiz Result</h2>
+                <p id="result"></p>
+            </div>
+        </div>
+
+<!-- </div> -->
+
+
+<script>
+    function calculateScore() {
+        let kiss = 0;
+        let knife = 0;
+
+        // Check multiple choice questions
+        const q1 = document.querySelector('input[name="question1"]:checked');
+        const q1Container = document.getElementById('question1');
+        if (q1 && q1.value === 'correct') {
+            kiss++;
+            q1Container.innerHTML += ' 💋';
+        } else {
+            knife++;
+            q1Container.innerHTML += ' 🔪';
+        }
+
+        const q2 = document.querySelector('input[name="question2"]:checked');
+        const q2Container = document.getElementById('question2');
+        if (q2 && q2.value === 'correct') {
+            kiss++;
+            q2Container.innerHTML += ' 💋';
+        } else {
+            knife++;
+            q2Container.innerHTML += ' 🔪';
+        }
+
+        // Check fill in the blanks
+        const q3 = document.getElementById('question3_input');
+        const q3Container = document.getElementById('question3');
+        if (q3.value.toLowerCase() === q3.getAttribute('data-answer').toLowerCase()) {
+            kiss++;
+            q3Container.innerHTML += ' 💋';
+        } else {
+            knife++;
+            q3Container.innerHTML += ' 🔪';
+        }
+
+        const q4 = document.getElementById('question4_input');
+        const q4Container = document.getElementById('question4');
+        if (q4.value.toLowerCase() === q4.getAttribute('data-answer').toLowerCase()) {
+            kiss++;
+            q4Container.innerHTML += ' 💋';
+        } else {
+            knife++;
+            q4Container.innerHTML += ' 🔪';
+        }
+
+        const q5 = document.getElementById('question5_input');
+        const q5Container = document.getElementById('question5');
+        if (q5.value.toLowerCase() === q5.getAttribute('data-answer').toLowerCase()) {
+            kiss++;
+            q5Container.innerHTML += ' 💋';
+        } else {
+            knife++;
+            q5Container.innerHTML += ' 🔪';
+        }
+
+        // Calculate remaining emojis
+        const remaining = kiss - knife;
+        let resultText = '';
+        if (remaining > 0) {
+            resultText = 'Kisses: ' + '💋'.repeat(remaining);
+        } else if (remaining < 0) {
+            resultText = 'Knives: ' + '🔪'.repeat(Math.abs(remaining));
+        } else {
+            resultText = 'Equal number of kisses and knives!';
+        }
+
+        // Display result in modal
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = resultText;
+
+        // Show modal
+        const modal = document.getElementById('resultModal');
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('resultModal');
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('resultModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

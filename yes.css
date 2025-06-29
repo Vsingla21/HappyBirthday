@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,500&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(189, 225, 122);
+    background-image: linear-gradient(pink, blue);
+}
+
+.header_text {
+    font-family: 'Clicker Script', cursive;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

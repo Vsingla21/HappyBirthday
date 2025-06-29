@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,500&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #fff;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: violet;
+    background-image: linear-gradient(180deg, #f9c0f9, #f9c0f9, violet, magenta, purple, black);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    /* border-right: 5px solid #333; */
+    border-top: 5px solid #333;
+    font-family: "Clicker Script", cursive;
+}
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9c0f9;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 2px dashed black;
+}
+
+.heart-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.note {
+    margin-top: 20px;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-size: medium;
+}
+
+.made-by {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    
+}
+
+.navbar {
+    background-image: linear-gradient(90deg, #f9c0f9, violet, purple, black);
+    padding: 20px;
+    text-align: right;
+    position: fixed;
+    width: calc(100% - 220px);
+    top: 0;
+    border-top: 5px solid #333;
+    left: 220px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    font-size: larger;
+}
+
+marquee {
+    margin-left: 20px;
+    margin-top: 50px;
+    background-color: black;
+    color: violet;
+    padding: 20px 10px 10px 20px;
+    display: flex;
+    position: fixed;
+    text-align: end;
+    z-index: 999;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+}
+
+.scrollable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 0;
+    height: 90vh;
+    background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+    background-position: center center;
+}
+
+.paper {
+    background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+    background-size: 500px;
+    background-position: center center;
+    padding: 10px 60px;
+    margin-top: 100px;
+    transform: rotateZ(-5deg);
+    box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+}
+
+.paper.heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.paper.image {
+    padding: 10px;
+}
+
+.paper.image p {
+    font-size: 30px;
+}
+
+img {
+    max-height: 200px;
+    width: 100%;
+    user-select: none;
+}
+
+.paper.heart::after {
+    content: "";
+    background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+   
+}
+
+p {
+    font-family: 'Zeyada';
+    font-size: 25px;
+    color: rgb(0, 0, 100);
+    opacity: 0.75;
+    user-select: none;
+
+    filter: drop-shadow(2px 1.5px 1px rgba(0, 0, 105, 0.9));
+}
+
+.external.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    z-index: 0;
+}
+
+button{
+    width: 100px;
+    padding: 10px;
+    background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+}
+.external.link a{
+    text-decoration: none;
+    color: rgb(0, 0, 100);
+}
+
+/* maybe.. */
+
+@keyframes moveOutRight {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes moveOutLeft {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100vw, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes moveOutTop {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, -100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes moveOutBottom {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes moveOutTopRight {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, -100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes moveOutTopLeft {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100vw, -100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes moveOutBottomRight {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, 100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes moveOutBottomLeft {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100vw, 100vh);
+        opacity: 0;
+    }
+}
+
+.move-out-right {
+    animation: moveOutRight 2s forwards;
+}
+
+.move-out-left {
+    animation: moveOutLeft 2s forwards;
+}
+
+.move-out-top {
+    animation: moveOutTop 2s forwards;
+}
+
+.move-out-bottom {
+    animation: moveOutBottom 2s forwards;
+}
+
+.move-out-top-right {
+    animation: moveOutTopRight 2s forwards;
+}
+
+.move-out-top-left {
+    animation: moveOutTopLeft 2s forwards;
+}
+
+.move-out-bottom-right {
+    animation: moveOutBottomRight 2s forwards;
+}
+
+.move-out-bottom-left {
+    animation: moveOutBottomLeft 2s forwards;
+}

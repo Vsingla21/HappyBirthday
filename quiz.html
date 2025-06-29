@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quizz.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    
+    <div class="sidebar">
+        <div class="heart-container">
+            <img src="iimages/sidebar-img.jpg" alt="Heart Image" class="heart-image">
+        </div>
+        <h2>Happy Birthday</h2>
+        <p class="note">OUR LOVE IS FOREVER! <br>
+            IT HAS ALWAYS BEEN! <br>
+            IT WILL ALWAYS BE! <br>
+            ALWAYS AND FOREVER!</p>
+        <p class="made-by">Made with ❤️ by your love</p>
+    </div>
+    <div class="main-content">
+        <nav class="navbar">
+            <a href="birthday.html">Home</a>
+            <a href="journey.html">Our Journey</a>
+            <a href="proposal.html">Proposal</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+        <marquee style="width: 100%;" scrollamount="10" direction="">Happy Birthday To Love, With Love, From Love.    Happy Birthday To Love, With Love, From Love    Happy Birthday To Love, With Love, From Love.</marquee>
+
+        <div class="direction-text">
+            <p>Heyyy!</p>
+            <p>Here's a quiz for you in case you wanna play.. </p>
+            <p>Let's know how well you know love, Love!</p>
+            <p>Choose any card from the below cards to play the suitable quiz..</p>
+            <p>Best Of Luck!, or should I say..</p>
+            <p>BEST OF LOVE!</p>
+        </div>
+<div class="choose-quiz-container">
+        <div class="choose-quiz">
+            <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+                <swiper-slide><img src="./images/quiz.jpeg" alt=""></swiper-slide>
+                <swiper-slide><img src="./images/mcq.webp" alt=""><p>Mutiple Choice Quiz</p><div><button class="play-button" onclick="loadQ1()">Play This</button></div></swiper-slide>
+                <swiper-slide><img src="./images/trueFalse.webp" alt=""><p>True or False Quiz</p><div><button class="play-button" onclick="loadQ2()">Play This</button></div></swiper-slide>
+                <swiper-slide><img src="./images/fillQuiz.jpg" alt=""><p>Fill In The Blanks Quiz</p><div><button class="play-button" onclick="loadQ3()">Play This</button></div></swiper-slide>
+                <swiper-slide><img src="./images/imgQuiz.jpg" alt=""><p>Image Quiz</p><div><button class="play-button" onclick="loadQ4()">Play This</button></div></swiper-slide>
+                <swiper-slide><img src="./images/vidQuiz.jpeg" alt=""><p>Video Quiz</p><div><button class="play-button" onclick="loadQ5()">Play This</button></div></swiper-slide>
+              </swiper-container>
+            </div>
+        </div>
+              <script>
+                function loadQ1(){
+                    window.location.href='mcq-quiz.html';
+                }
+                function loadQ2(){
+                    window.location.href='tf-quiz.html';
+                }
+                function loadQ3(){
+                    window.location.href='fill-quiz.html';
+                }
+                function loadQ4(){
+                    window.location.href='img-quiz.html';
+                }
+                function loadQ5(){
+                    window.location.href='vid-quiz.html';
+                }
+              </script>
+
+              <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        
+</body>
+
+</html>
